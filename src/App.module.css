@@ -1,0 +1,38 @@
+.app{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 0 var(--two-spaces);
+    max-width: var(--max-width-page);
+    width: 100%;
+    margin: 0 auto;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    padding: var(--two-spaces) 0;
+    border-bottom: var(--border-primary);
+    column-gap: var(--two-spaces);
+}
+
+.main{
+    flex-grow: 1;
+    padding: var(--four-spaces) 0;
+}
+
+.footer{
+    text-align: center;
+    white-space: break-spaces;
+    word-break: break-word;
+    padding: var(--two-spaces) 0;
+    border-top: var(--border-default);
+}
+
+.title{
+    color: var(--color-primary);
+    font-size: 2rem;
+    line-height: 1.5;
+    font-family: 'Grand Hotel', cursive;
+    flex-grow: 1;
+}

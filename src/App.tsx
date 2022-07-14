@@ -1,7 +1,24 @@
-import './App.css'
+import './App.module.css'
+import { Outlet } from "react-router-dom"
+import { Link, Target } from "./components/link/Link";
+import styles from "./App.module.css"
+import { SelectTheme } from "./components/theme/SelectTheme";
 
 function App() {
-  return <h1>Hello world</h1>
+  return (
+    <div className={styles.app}>
+      <header className={styles.header}>
+        <h1 className={styles.title}>Photos gallery</h1>
+        <SelectTheme />
+      </header>
+      <main className={styles.main}>
+        <Outlet />
+      </main>
+      <footer className={styles.footer}>
+        Developed by <Link target={Target.BLANK} href="https://hotequil.tech">hotequil</Link>
+      </footer>
+    </div>
+  )
 }
 
 export default App
