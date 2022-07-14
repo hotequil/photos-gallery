@@ -1,9 +1,34 @@
+@import "reset.css";
+
 :root{
-  --color-text: #E8E8E8;
-  --color-background: #1b1b1b;
-  --color-primary: #B90504;
-  --color-dark-primary: #990100;
+  --color-white: #fdfdfd;
+  --color-black: #111;
+  --color-grey-dark: #333;
+  --color-grey-light: #dedede;
+  --color-primary: #8338ec;
+  --color-secondary: #3a86ff;
   --ms-transition: 200ms;
+  --one-space: 4px;
+  --two-spaces: calc(var(--one-space) * 2);
+  --four-spaces: calc(var(--one-space) * 4);
+  --max-width-page: 1200px;
+  --default-border: 1px solid;
+  --big-border: 2px solid;
+  --border-default: var(--default-border) var(--color-border);
+  --border-primary: var(--big-border) var(--color-primary);
+  --border-secondary: var(--big-border) var(--color-secondary);
+}
+
+html.light{
+  --color-text: var(--color-black);
+  --color-background: var(--color-white);
+  --color-border: var(--color-grey-light);
+}
+
+html.dark{
+  --color-text: var(--color-white);
+  --color-background: var(--color-black);
+  --color-border: var(--color-grey-dark);
 }
 
 html, body, #root{
@@ -22,16 +47,14 @@ html, body{
   font-size: 1rem;
 }
 
-ul, ol{
-  list-style: none;
-}
-
 *{
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  transition: color var(--ms-transition), background-color var(--ms-transition);
+  transition: color, background-color, border-bottom-color, border-left-color, border-right-color, border-top-color;
+  transition-duration: var(--ms-transition);
   color: var(--color-text);
+  outline: none;
 }
 
 ::-moz-selection{
@@ -41,12 +64,6 @@ ul, ol{
 
 ::selection{
   background: var(--color-primary);
-  color: var(--color-text);
-}
-
-.title{
-  font-weight: 600;
-  font-family: 'Grand Hotel', cursive;
   color: var(--color-text);
 }
 
