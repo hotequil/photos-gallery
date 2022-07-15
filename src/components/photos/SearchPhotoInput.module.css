@@ -1,0 +1,24 @@
+.input{
+    width: 100%;
+    max-width: 364px;
+    padding: var(--two-spaces) var(--one-space);
+    border: var(--border-primary);
+    border-radius: var(--one-space);
+    background-color: transparent;
+    font-size: 1rem;
+    color: var(--color-text);
+}
+
+.input::placeholder{
+    color: var(--color-text);
+}
+
+.input:hover, .input:focus{
+    border: var(--border-secondary);
+}
+
+@media(max-width: 600px){
+    .input{
+        max-width: 100%;
+    }
+}
