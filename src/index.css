@@ -7,6 +7,7 @@
   --color-grey-light: #dedede;
   --color-primary: #8338ec;
   --color-secondary: #3a86ff;
+  --color-secondary-opacity-56: rgba(58, 134, 255, 0.56);
   --ms-transition: 200ms;
   --one-space: 4px;
   --one-half-space: calc(var(--one-space) / 2);

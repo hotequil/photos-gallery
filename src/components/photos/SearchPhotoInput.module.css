@@ -15,6 +15,7 @@
 
 .input:hover, .input:focus{
     border: var(--border-secondary);
+    box-shadow: 0 0 var(--one-half-space) var(--one-half-space) var(--color-secondary-opacity-56);
 }
 
 @media(max-width: 600px){
