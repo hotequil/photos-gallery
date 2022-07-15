@@ -9,6 +9,7 @@
   --color-secondary: #3a86ff;
   --ms-transition: 200ms;
   --one-space: 4px;
+  --one-half-space: calc(var(--one-space) / 2);
   --two-spaces: calc(var(--one-space) * 2);
   --four-spaces: calc(var(--one-space) * 4);
   --max-width-page: 1200px;
@@ -17,6 +18,7 @@
   --border-default: var(--default-border) var(--color-border);
   --border-primary: var(--big-border) var(--color-primary);
   --border-secondary: var(--big-border) var(--color-secondary);
+  --small-shadow-primary: 0 0 var(--one-half-space) var(--one-half-space) var(--color-primary);
 }
 
 html.light{
@@ -51,7 +53,7 @@ html, body{
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  transition: color, background-color, border-bottom-color, border-left-color, border-right-color, border-top-color;
+  transition: color, background-color, border-bottom-color, border-left-color, border-right-color, border-top-color, box-shadow;
   transition-duration: var(--ms-transition);
   color: var(--color-text);
   outline: none;
