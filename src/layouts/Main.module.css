@@ -1,0 +1,30 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--four-spaces);
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    gap: var(--four-spaces);
+}
+
+.title{
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--color-secondary);
+    word-break: break-word;
+}
+
+.body{
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--two-spaces);
+}
+
+@media(max-width: 600px){
+    .header{
+        flex-direction: column;
+    }
+}
