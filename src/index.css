@@ -18,7 +18,6 @@
   --border-default: var(--default-border) var(--color-border);
   --border-primary: var(--big-border) var(--color-primary);
   --border-secondary: var(--big-border) var(--color-secondary);
-  --small-shadow-primary: 0 0 var(--one-half-space) var(--one-half-space) var(--color-primary);
 }
 
 html.light{

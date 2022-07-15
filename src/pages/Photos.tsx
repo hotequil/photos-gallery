@@ -4,8 +4,9 @@ import { SearchPhotoInput } from "../components/photos/SearchPhotoInput";
 
 export const Photos: React.FC = () => {
   return (
-    <Main title="List" actionLeft={<SearchPhotoInput onInput={() => {}} />}>
-      TODO LIST
+    <Main title="List" action={<SearchPhotoInput onInput={() => {}} />}>
+      <span>TODO</span>
+      <span>LIST</span>
     </Main>
   )
 }

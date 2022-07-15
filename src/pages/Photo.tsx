@@ -4,7 +4,8 @@ import { Main } from "../layouts/Main";
 export const Photo: React.FC = () => {
   return (
     <Main title="Details">
-      TODO PHOTO
+      <span>TODO</span>
+      <span>PHOTO</span>
     </Main>
   )
 }
