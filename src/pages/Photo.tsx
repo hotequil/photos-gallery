@@ -1,5 +1,10 @@
 import React from "react";
+import { Main } from "../layouts/Main";
 
 export const Photo: React.FC = () => {
-  return <h1>Hello photo</h1>
+  return (
+    <Main title="Details">
+      TODO PHOTO
+    </Main>
+  )
 }
