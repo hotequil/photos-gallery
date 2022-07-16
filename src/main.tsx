@@ -4,7 +4,7 @@ import App from './App'
 import './index.css'
 import { Photos } from "./pages/Photos";
 import { Photo } from "./pages/Photo";
-import { Route, Routes, BrowserRouter } from "react-router-dom"
+import { Route, Routes, BrowserRouter, Navigate } from "react-router-dom"
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -13,6 +13,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route element={<App />}>
           <Route path="/" element={<Photos />}/>
           <Route path="/photos/:photoId" element={<Photo />}/>
+          <Route path="*" element={<Navigate to="/" />} />
         </Route>
       </Routes>
     </BrowserRouter>
