@@ -1,0 +1,33 @@
+.click{
+    display: flex;
+    flex-direction: column;
+    padding: var(--four-spaces);
+    row-gap: var(--four-spaces);
+    text-decoration: none;
+    font-size: 1.25rem;
+    height: 100%;
+    border-radius: var(--one-space);
+    border: var(--border-primary);
+    cursor: pointer;
+    background-color: var(--color-primary-opacity-12);
+    color: var(--color-text);
+}
+
+.item{
+    display: block;
+}
+
+.image{
+    border-radius: var(--one-space);
+    height: auto;
+    width: 100%;
+}
+
+.title{
+    color: var(--color-text);
+}
+
+.click:focus, .click:hover{
+    border: var(--border-secondary);
+    background-color: var(--color-secondary-opacity-12);
+}
