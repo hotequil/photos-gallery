@@ -1,0 +1,91 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: calc(var(--four-spaces) * 2) var(--two-spaces);
+    width: 100%;
+}
+
+.dotPulse {
+    --dot-pulse-max: 9999px;
+    --dot-pulse-shadow-before: 9984px;
+    --dot-pulse-shadow-after: 10014px;
+    --dot-pulse-time: 1.4s;
+
+    position: relative;
+    left: calc(var(--dot-pulse-max) * -1);
+    width: var(--two-spaces);
+    height: var(--two-spaces);
+    border-radius: var(--one-space);
+    background-color: var(--color-primary);
+    color: var(--color-primary);
+    box-shadow: var(--dot-pulse-max) 0 0 calc(var(--one-space) * -1) var(--color-primary);
+    animation: dotPulse var(--dot-pulse-time) infinite linear;
+    animation-delay: calc(var(--ms-transition) / 2);
+}
+
+.dotPulse::before, .dotPulse::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    width: var(--two-spaces);
+    height: var(--two-spaces);
+    border-radius: var(--one-space);
+    background-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
+.dotPulse::before {
+    box-shadow: var(--dot-pulse-shadow-before) 0 0 calc(var(--one-space) * -1) var(--color-primary);
+    animation: dotPulseBefore var(--dot-pulse-time) infinite linear;
+    animation-delay: 0s;
+}
+
+.dotPulse::after {
+    box-shadow: var(--dot-pulse-shadow-after) 0 0 calc(var(--one-space) * -1) var(--color-primary);
+    animation: dotPulseAfter var(--dot-pulse-time) infinite linear;
+    animation-delay: var(--ms-transition);
+}
+
+@keyframes dotPulseBefore {
+    0% {
+        box-shadow: var(--dot-pulse-shadow-before) 0 0 calc(var(--one-space) * -1) var(--color-primary);
+    }
+
+    30% {
+        box-shadow: var(--dot-pulse-shadow-before) 0 0 var(--one-half-space) var(--color-primary);
+    }
+
+    60%, 100% {
+        box-shadow: var(--dot-pulse-shadow-before) 0 0 calc(var(--one-space) * -1) var(--color-primary);
+    }
+}
+
+@keyframes dotPulse {
+    0% {
+        box-shadow: var(--dot-pulse-max) 0 0 calc(var(--one-space) * -1) var(--color-primary);
+    }
+
+    30% {
+        box-shadow: var(--dot-pulse-max) 0 0 var(--one-half-space) var(--color-primary);
+    }
+
+    60%, 100% {
+        box-shadow: var(--dot-pulse-max) 0 0 calc(var(--one-space) * -1) var(--color-primary);
+    }
+}
+
+@keyframes dotPulseAfter {
+    0% {
+        box-shadow: var(--dot-pulse-shadow-after) 0 0 calc(var(--one-space) * -1) var(--color-primary);
+    }
+
+    30% {
+        box-shadow: var(--dot-pulse-shadow-after) 0 0 var(--one-half-space) var(--color-primary);
+    }
+
+    60%, 100% {
+        box-shadow: var(--dot-pulse-shadow-after) 0 0 calc(var(--one-space) * -1) var(--color-primary);
+    }
+}
