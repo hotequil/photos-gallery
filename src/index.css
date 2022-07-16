@@ -7,6 +7,8 @@
   --color-grey-light: #dedede;
   --color-primary: #8338ec;
   --color-secondary: #3a86ff;
+  --color-primary-opacity-12: rgba(131, 56, 236, 0.12);
+  --color-secondary-opacity-12: rgba(58, 134, 255, 0.12);
   --color-secondary-opacity-56: rgba(58, 134, 255, 0.56);
   --ms-transition: 200ms;
   --one-space: 4px;
@@ -39,10 +41,16 @@ html, body, #root{
   color: var(--color-text);
   background-color: var(--color-background);
   line-height: 1.2;
+  overflow-x: hidden;
 }
 
 html, body{
   font-size: 16px;
+}
+
+img{
+  pointer-events: none;
+  user-select: none;
 }
 
 #root{

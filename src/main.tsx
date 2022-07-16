@@ -12,7 +12,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <Routes>
         <Route element={<App />}>
           <Route path="/" element={<Photos />}/>
-          <Route path="/:photoId" element={<Photo />}/>
+          <Route path="/photos/:photoId" element={<Photo />}/>
         </Route>
       </Routes>
     </BrowserRouter>
