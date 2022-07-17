@@ -6,7 +6,7 @@ import { Photos } from "./pages/Photos";
 import { Photo } from "./pages/Photo";
 import { Route, Routes, BrowserRouter, Navigate } from "react-router-dom"
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
