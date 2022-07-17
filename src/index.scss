@@ -49,6 +49,10 @@ html, body, #root{
 
 html, body{
   font-size: 16px;
+
+  @include mixins.sm{
+    font-size: 14px;
+  }
 }
 
 img{
@@ -76,10 +80,4 @@ img{
 
 ::selection{
   @include mixins.selection;
-}
-
-@include mixins.sm{
-  html, body{
-    font-size: 14px;
-  }
 }
