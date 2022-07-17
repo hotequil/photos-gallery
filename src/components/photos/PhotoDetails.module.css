@@ -6,7 +6,7 @@
 
 .header{
     display: flex;
-    column-gap: var(--four-spaces);
+    column-gap: var(--two-spaces);
     align-items: center;
     border-bottom: var(--border-default);
     padding-bottom: var(--four-spaces);
@@ -39,4 +39,7 @@
 .list{
     font-size: 1.25rem;
     font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--two-spaces);
 }
