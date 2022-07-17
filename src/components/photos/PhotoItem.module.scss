@@ -11,6 +11,11 @@
     cursor: pointer;
     background-color: var(--color-primary-opacity-12);
     color: var(--color-text);
+
+    &:focus, &:hover{
+        border: var(--border-secondary);
+        background-color: var(--color-secondary-opacity-12);
+    }
 }
 
 .item{
@@ -25,9 +30,4 @@
 
 .title{
     color: var(--color-text);
-}
-
-.click:focus, .click:hover{
-    border: var(--border-secondary);
-    background-color: var(--color-secondary-opacity-12);
 }

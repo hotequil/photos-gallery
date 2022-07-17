@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./PhotoItem.module.css";
+import styles from "./PhotoItem.module.scss";
 import { Target } from "../link/Link";
 import { Link } from "react-router-dom";
 
