@@ -1,3 +1,5 @@
+@use "../mixins";
+
 .main{
     display: flex;
     flex-direction: column;
@@ -23,7 +25,7 @@
     row-gap: var(--two-spaces);
 }
 
-@media(max-width: 600px){
+@include mixins.sm{
     .header{
         flex-direction: column;
     }

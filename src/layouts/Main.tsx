@@ -1,6 +1,6 @@
 import React, { PropsWithChildren, ReactNode } from "react";
 import PropTypes from "prop-types";
-import styles from "./Main.module.css"
+import styles from "./Main.module.scss"
 
 interface MainProps{
   title: string
