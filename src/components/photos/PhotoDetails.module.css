@@ -1,0 +1,42 @@
+.card{
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--four-spaces);
+}
+
+.header{
+    display: flex;
+    column-gap: var(--four-spaces);
+    align-items: center;
+    border-bottom: var(--border-default);
+    padding-bottom: var(--four-spaces);
+}
+
+.thumbnail{
+    max-width: 50px;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.title{
+    font-size: 1.375rem;
+    font-weight: 500;
+}
+
+.body{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    row-gap: var(--four-spaces);
+}
+
+.image{
+    max-width: 600px;
+    width: 100%;
+    border-radius: var(--one-space);
+}
+
+.list{
+    font-size: 1.25rem;
+    font-weight: 600;
+}
