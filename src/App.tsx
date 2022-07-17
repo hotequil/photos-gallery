@@ -1,7 +1,6 @@
-import './App.module.css'
 import { Outlet } from "react-router-dom"
 import { Link, Target } from "./components/link/Link";
-import styles from "./App.module.css"
+import styles from "./App.module.scss"
 import { SelectTheme } from "./components/theme/SelectTheme";
 
 function App() {
