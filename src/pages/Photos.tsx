@@ -15,7 +15,7 @@ export const Photos: React.FC = () => {
   const [memoryPhotos, setMemoryPhotos] = useState<PhotosType>([])
   const [loading, setLoading] = useState(false)
 
-  const onSearch = value => {
+  const onSearch = (value: string) => {
     setSearch(value)
     setPhotos(memoryPhotos.filter(({ title }) => title.includes(value)))
   }

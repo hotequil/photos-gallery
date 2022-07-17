@@ -28,7 +28,7 @@ export class PhotosService{
     })
   }
 
-  getItem(id: number): Promise<Photo|null>{
+  getItem(id: number|undefined): Promise<Photo|null>{
     return new Promise<Photo|null>(resolve => {
       setTimeout(async () => {
         try {

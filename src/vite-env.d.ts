@@ -1,1 +1,5 @@
-/// <reference types="vite" />
+interface ImportMeta {
+  env: {
+    VITE_API_URL: string;
+  }
+}

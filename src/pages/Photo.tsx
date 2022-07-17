@@ -18,7 +18,8 @@ export const Photo: React.FC = () => {
   const get = async () => {
     setLoading(true)
 
-    const response = await service.getItem(+params.photoId)
+    const id = params?.photoId
+    const response = await service.getItem((id && +id) || undefined)
 
     setPhoto(response)
     setLoading(false)

@@ -10,7 +10,7 @@ const THEME_KEY = "PHOTOS_GALLERY_THEME"
 let html: HTMLHtmlElement|null = null
 
 const setTheme = (theme: Theme) => {
-  if(!html) html = document.querySelector('html')
+  if(!html) html = document.querySelector('html') as HTMLHtmlElement
 
   html.classList.add(theme)
   html.classList.remove(theme === Theme.LIGHT ? Theme.DARK : Theme.LIGHT)
