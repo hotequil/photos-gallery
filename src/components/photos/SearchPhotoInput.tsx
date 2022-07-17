@@ -1,6 +1,6 @@
 import React, { useMemo } from "react";
 import { uniqueId } from "../../helpers/unique-id";
-import styles from "./SearchPhotoInput.module.css"
+import styles from "./SearchPhotoInput.module.scss"
 
 export interface SearchPhotoInputProps{
   onInput: Function
