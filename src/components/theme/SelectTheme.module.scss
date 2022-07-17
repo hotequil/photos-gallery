@@ -7,9 +7,9 @@
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
-}
 
-.button:hover, .button:focus{
-    color: var(--color-white);
-    background-color: var(--color-secondary);
+    &:hover, &:focus{
+        color: var(--color-white);
+        background-color: var(--color-secondary);
+    }
 }

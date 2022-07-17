@@ -1,5 +1,5 @@
 import { useState } from "react";
-import styles from "./SelectTheme.module.css"
+import styles from "./SelectTheme.module.scss"
 
 enum Theme{
   LIGHT = "light",
