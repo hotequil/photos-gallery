@@ -1,5 +1,17 @@
 @use "./variables";
 
+@mixin lg{
+    @media(variables.$desktop-break){
+        @content
+    }
+}
+
+@mixin md{
+    @media(variables.$tablet-break){
+        @content
+    }
+}
+
 @mixin sm{
     @media(variables.$mobile-break){
         @content

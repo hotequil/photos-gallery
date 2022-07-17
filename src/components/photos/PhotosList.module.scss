@@ -1,23 +1,19 @@
+@use "../../mixins";
+
 .list{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: var(--four-spaces);
-}
 
-@media(max-width: 1200px){
-    .list{
+    @include mixins.lg{
         grid-template-columns: repeat(3, 1fr);
     }
-}
 
-@media(max-width: 800px){
-    .list{
+    @include mixins.md{
         grid-template-columns: repeat(2, 1fr);
     }
-}
 
-@media(max-width: 600px){
-    .list{
+    @include mixins.sm{
         grid-template-columns: repeat(1, 1fr);
     }
 }
