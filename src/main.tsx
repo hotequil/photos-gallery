@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
-import './index.css'
+import './index.scss'
 import { Photos } from "./pages/Photos";
 import { Photo } from "./pages/Photo";
 import { Route, Routes, BrowserRouter, Navigate } from "react-router-dom"

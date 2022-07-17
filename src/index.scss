@@ -1,4 +1,7 @@
-@import "reset.scss";
+@use "variables";
+@use "mixins";
+
+@import "reset";
 
 :root{
   --color-white: #fdfdfd;
@@ -68,16 +71,14 @@ img{
 }
 
 ::-moz-selection{
-  background: var(--color-primary);
-  color: var(--color-text);
+  @include mixins.selection;
 }
 
 ::selection{
-  background: var(--color-primary);
-  color: var(--color-text);
+  @include mixins.selection;
 }
 
-@media(max-width: 600px){
+@include mixins.sm{
   html, body{
     font-size: 14px;
   }
