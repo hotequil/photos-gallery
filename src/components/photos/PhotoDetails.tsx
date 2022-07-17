@@ -1,6 +1,6 @@
 import { Photo } from "../../services/PhotosService";
 import React from "react";
-import styles from "./PhotoDetails.module.css"
+import styles from "./PhotoDetails.module.scss"
 
 export interface PhotoDetailsItem {
   title: string
