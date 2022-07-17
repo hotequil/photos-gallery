@@ -1,7 +1,0 @@
-.link{
-    color: var(--color-primary);
-}
-
-.link:focus, .link:hover{
-    color: var(--color-secondary);
-}

@@ -1,5 +1,5 @@
 import React, { PropsWithChildren } from "react";
-import styles from "./Link.module.css"
+import styles from "./Link.module.scss"
 import PropTypes from "prop-types"
 import { Link as LinkElement } from "react-router-dom"
 
