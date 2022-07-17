@@ -23,18 +23,14 @@
     color: var(--color-text);
 }
 
-@mixin dot-pulse-animation($name, $startShadow, $middleShadow, $endShadow){
+@mixin dot-pulse-animation($name, $startAndEndShadow, $middleShadow){
     @keyframes #{$name}{
-        0% {
-            box-shadow: $startShadow;
-        }
-
         30% {
             box-shadow: $middleShadow;
         }
 
-        60%, 100% {
-            box-shadow: $endShadow;
+        0%, 60%, 100% {
+            box-shadow: $startAndEndShadow;
         }
     }
 }

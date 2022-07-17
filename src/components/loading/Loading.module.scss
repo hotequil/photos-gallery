@@ -1,0 +1,76 @@
+@use "../../mixins";
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: calc(var(--four-spaces) * 2) var(--four-spaces);
+    width: 100%;
+}
+
+.dotPulse {
+    --dot-pulse-max: 9999px;
+    --dot-pulse-shadow-before: 9984px;
+    --dot-pulse-shadow-after: 10014px;
+    --dot-pulse-time: 1.4s;
+
+    position: relative;
+    left: calc(var(--dot-pulse-max) * -1);
+    width: var(--two-spaces);
+    height: var(--two-spaces);
+    border-radius: var(--one-space);
+    background-color: var(--color-primary);
+    color: var(--color-primary);
+
+    @include mixins.dot-pulse-effect(
+        var(--dot-pulse-max) 0 0 calc(var(--one-space) * -1) var(--color-primary),
+        dotPulse var(--dot-pulse-time) infinite linear,
+        calc(var(--ms-transition) / 2)
+    );
+
+    &::before, &::after {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        width: var(--two-spaces);
+        height: var(--two-spaces);
+        border-radius: var(--one-space);
+        background-color: var(--color-primary);
+        color: var(--color-primary);
+    }
+
+    &::before {
+        @include mixins.dot-pulse-effect(
+            var(--dot-pulse-shadow-before) 0 0 calc(var(--one-space) * -1) var(--color-primary),
+            dotPulseBefore var(--dot-pulse-time) infinite linear,
+            0s
+        );
+    }
+
+    &::after {
+        @include mixins.dot-pulse-effect(
+            var(--dot-pulse-shadow-after) 0 0 calc(var(--one-space) * -1) var(--color-primary),
+            dotPulseAfter var(--dot-pulse-time) infinite linear,
+            var(--ms-transition)
+        );
+    }
+}
+
+@include mixins.dot-pulse-animation(
+    dotPulseBefore,
+    var(--dot-pulse-shadow-before) 0 0 calc(var(--one-space) * -1) var(--color-primary),
+    var(--dot-pulse-shadow-before) 0 0 var(--one-half-space) var(--color-primary)
+);
+
+@include mixins.dot-pulse-animation(
+    dotPulse,
+    var(--dot-pulse-max) 0 0 calc(var(--one-space) * -1) var(--color-primary),
+    var(--dot-pulse-max) 0 0 var(--one-half-space) var(--color-primary)
+);
+
+@include mixins.dot-pulse-animation(
+    dotPulseAfter,
+    var(--dot-pulse-shadow-after) 0 0 calc(var(--one-space) * -1) var(--color-primary),
+    var(--dot-pulse-shadow-after) 0 0 var(--one-half-space) var(--color-primary)
+);
