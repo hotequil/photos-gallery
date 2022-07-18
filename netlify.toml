@@ -3,7 +3,7 @@
   publish = "dist"
 [[redirects]]
     from = "/*"
-    to = "/index.html"
+    to = "/"
     status = 301
 [[headers]]
     for = "/*"
