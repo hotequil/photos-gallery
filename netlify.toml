@@ -5,6 +5,7 @@
     from = "/*"
     to = "/index.html"
     status = 301
+    force = false
 [[headers]]
     for = "/*"
         [headers.values]
